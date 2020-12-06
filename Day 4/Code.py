@@ -21,6 +21,15 @@ for i in f.readlines():
         z = []
     else:
         z.append(i.strip("\n").strip(" "))
+for ii in z:
+    for iii in ii.split(" "):
+        v = iii.split(":")
+        key = v[0]
+        data = v[1]
+        zz[key] = data
+y.append(zz)
+zz = {}
+z = []
 
 check = ['byr','iyr','eyr','hgt','hcl','ecl','pid']
 eye = ['amb','blu','brn','gry','grn','hzl','oth']
@@ -30,7 +39,7 @@ b = []
 def checker(dic):
     for c in check:
         if c in dic:
-            k = 2
+            continue
         else:
             return False
     return True
